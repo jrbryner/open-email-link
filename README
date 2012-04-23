@@ -1,0 +1,14 @@
+Put files in "~/Library/Workflows/Mail Rules"
+
+Add "Run AppleScript" rule to mail app to run the "Launch Automator Workflow"
+
+Example Rule:
+
+Description: Open Link
+If [all] of the following conditions are met
+ - [From] [Contains] <my email address>
+ - [Subject] [Ends with] <insert passcode>
+
+Perform the following actions
+ - [Mark as Read]
+ - [Run AppleScript] "~/Library/Workflows/Mail Rules/Launch Automator Workflow.scpt"
